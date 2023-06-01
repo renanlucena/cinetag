@@ -1,16 +1,14 @@
-import React from 'react'
+import videos from "json/db.json";
 import styles from "./Cards.module.css";
-import iconeFavoritar from "./favoritar.png";
+import React from 'react'
+import Card from "components/Card";
 
-export default function Cards({id, titulo, capa}) {
+export default function Cards() {
   return (
-    <div className={styles.container}>
-        <img src={capa} atl={titulo} className={styles.capa}/>
-        <h2>{titulo}</h2>
-        <img src={iconeFavoritar}
-            alt="Favoritar filme"
-            className={styles.favoritar} />
-
-    </div>
+   <section className={styles.container} >
+    {videos.map((video) => (
+      <Card {...video} key={video.id}/>
+    ))}
+   </section>
   )
 }
