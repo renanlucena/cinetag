@@ -1,1 +1,1 @@
-Projeto utilizado para o treinamento de React e JavaScript da Alura.
+Projeto utilizado para o treinamento de React e JavaScript na Alura.
