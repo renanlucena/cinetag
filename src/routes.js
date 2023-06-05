@@ -12,6 +12,7 @@ export default function AppRoutes(){
                 <Route path="/" element ={<PaginaBase />}>
                 <Route index element={<Inicio/>}></Route>
                 <Route path="favoritos" element={<Favoritos/>}></Route>
+                <Route path="favoritos/:id" element={<Player />}></Route>
                 <Route path=":id" element={<Player />}></Route>
                 <Route path="*" element={<NaoEncontrada />}></Route>
                 </Route>
