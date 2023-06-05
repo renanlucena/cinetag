@@ -4,6 +4,7 @@ import Banner from 'components/Banner';
 import Titulo from 'components/Titulo';
 import { useParams } from 'react-router-dom';
 import videos from "json/db.json";
+import NaoEncontrada from 'pages/NaoEncontrada';
 
 export default function Player() {
     const parametros = useParams();
@@ -12,6 +13,9 @@ export default function Player() {
     })
     console.log(video);
 
+  if(!video){
+    return <NaoEncontrada />
+  }
   return (
     <>
     <Banner imagem="player" />
